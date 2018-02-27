@@ -1,0 +1,23 @@
+version: '3.4'
+
+volumes:
+  ethchain: {}
+  
+services:
+  ethchain:
+    build: ./build
+    image: dnp_ethchain:dev
+    container_name: dnp_ethchain_dev
+    restart: always
+    volumes:
+      - ethchain:/root/.local/share/io.parity.ethereum/
+    ports:
+      - "30303:30303"
+      - "30303:30303/udp"
+      
+      # ONLY FOR DEVELOPMENT
+      - "127.0.0.1:8545:8545"
+      - "127.0.0.1:8546:8546"
+      - "127.0.0.1:8180:8180"
+    command:
+      --jsonrpc-port 8545 --jsonrpc-interface all --jsonrpc-hosts all --jsonrpc-cors '*' --ws-interface 0.0.0.0 --ws-port 8546 --ws-origins '*' --ws-hosts all --cache-size 1024 --ui-interface "0.0.0.0" --ui-hosts all --ui-no-validation 
