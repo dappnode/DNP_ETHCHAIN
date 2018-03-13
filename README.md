@@ -62,13 +62,13 @@ After it starts Parity will be accessible from 8545 (RPC), 8546 (WS), 8180 (UI) 
 If you need to get a token for the UI you can execute the following command:
 
 ```
-$ docker-compose exec ethchain parity signer new-token
+$ docker-compose exec dnp_ethchain parity signer new-token
 ```
 **Note**: 
 There is a time drift issue on Docker for Mac, to solve it try running [Fixing Time drift issue on Docker for Mac](https://blog.shameerc.com/2017/03/quick-tip-fixing-time-drift-issue-on-docker-for-mac):
 
 ```
-docker run --rm --privileged alpine hwclock -s
+$ docker run --rm --privileged alpine hwclock -s
 ```
 
 ## Generating a tar.xz image
@@ -76,10 +76,10 @@ docker run --rm --privileged alpine hwclock -s
 [xz](https://tukaani.org/xz/) is required 
 
 ```
-$docker save dnp_ethchain:dev | xz -9 > dnp_ethchain_dev.tar.xz
+$ docker save dnp_ethchain:dev | xz -9 > dnp_ethchain_dev.tar.xz
 ```
 
-You can download the latest tar.xz version from here [tags](https://github.com/dappnode/DNP_ETHCHAIN/tags).
+You can download the latest tar.xz version from here [releases](https://github.com/dappnode/DNP_ETHCHAIN/releases).
 
 ### Loading a Docker image
 

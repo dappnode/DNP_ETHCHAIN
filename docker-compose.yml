@@ -4,11 +4,10 @@ volumes:
   ethchain: {}
   
 services:
-  ethchain:
+  dnp_ethchain:
     build: ./build
     image: dnp_ethchain:dev
     container_name: dnp_ethchain_dev
-    restart: always
     volumes:
       - ethchain:/root/.local/share/io.parity.ethereum/
     ports:
