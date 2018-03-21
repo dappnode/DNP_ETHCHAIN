@@ -6,7 +6,7 @@ volumes:
 services:
   dnp_ethchain:
     build: ./build
-    image: dnp_ethchain
+    image: dappnode/dnp_ethchain
     container_name: dnp_ethchain_dev
     volumes:
       - ethchain:/root/.local/share/io.parity.ethereum/
