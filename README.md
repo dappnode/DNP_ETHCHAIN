@@ -1,4 +1,4 @@
-# DAppNode Package EthChain (Core)
+# DAppNode Package ETHCHAIN (Core)
 
 <p align="left">
   <img src="ETHCHAIN-min.png" width="100"/>
