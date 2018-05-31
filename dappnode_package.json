@@ -1,0 +1,38 @@
+{
+  "name": "ethchain.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v1.11.1",
+  "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
+  "type": "dncore",
+  "image": {
+    "path": "ethchain.dnp.dappnode.eth_0.1.0.tar.xz",
+    "hash": "/ipfs/QmdZd4uVcRocoGs1EQFAyHYs2GE69vPg2yC7aiTqjuWwRb",
+    "size": 73631907,
+    "volumes": [
+      "data:/root/.local/share/io.parity.ethereum/"
+    ],
+    "ports": [
+      "30303:30303",
+      "30303:30303/udp"
+    ],
+    "restart": "always",
+    "subnet": "172.33.0.0/16",
+    "ipv4_address": "172.33.1.6"
+  },
+  "author": "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+  "keywords": [
+    "DAppNodeCore",
+    "Parity",
+    "Mainnet",
+    "Ethereum"
+  ],
+  "homepage": "https://github.com/dappnode/DNP_ETHCHAIN#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dappnode/DNP_ETHCHAIN"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DNP_ETHCHAIN/issues"
+  },
+  "license": "GPL-3.0"
+}

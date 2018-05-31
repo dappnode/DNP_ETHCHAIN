@@ -1,8 +1,20 @@
-# DNP_ETHCHAIN
+# DAppNode Package EthChain (Core)
+
+<p align="left">
+  <img src="ETHCHAIN-min.png" width="100"/>
+</p>
+
+[![Website dappnode.io](https://img.shields.io/badge/Website-dappnode.io-brightgreen.svg)](https://dappnode.io/)
+[![Documentation Wiki](https://img.shields.io/badge/Documentation-Wiki-brightgreen.svg)](https://github.com/dappnode/DAppNode/wiki)
+[![GIVETH Campaign](https://img.shields.io/badge/GIVETH-Campaign-1e083c.svg)](https://alpha.giveth.io/campaigns/OcKJryNwjeidMXi9)
+[![RIOT DAppNode](https://img.shields.io/badge/RIOT-DAppNode-blue.svg)](https://riot.im/app/#/room/#DAppNode:matrix.org)
+[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/DAppNODE?lang=es)
 
 Dappnode package responsible for providing the Ethereum blockchain service. 
 
-Actually based on version v1.9.3 of [Parity](https://github.com/paritytech/parity/releases/tag/v1.9.3)
+Actually based on version v1.11.1 of [Parity](https://github.com/paritytech/parity/releases/tag/v1.11.1)
+
+It is an AragonApp whose repo is deployed at this address: [0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ](https://etherscan.io/address/0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ) and whose ENS address is: [ethchain.dnp.dappnode.eth](https://etherscan.io/enslookup?q=ethchain.dnp.dappnode.eth])
 
 ## Getting Started
 
@@ -31,7 +43,7 @@ $ git clone https://github.com/dappnode/DNP_ETHCHAIN.git
 ```
 
 ```
-$ docker-compose build
+$ docker-compose -f docker-compose-ethchain.yml build
 or 
 $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build 
 ```
@@ -40,30 +52,21 @@ $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build
 
 ### Start
 ```
-$ docker-compose up -d
+$ docker-compose -f docker-compose-ethchain.yml up -d
 ```
 ### Stop
 ```
-$ docker-compose down
+$ docker-compose -f docker-compose-ethchain.yml down
 ```
 ### Status
 ```
-$ docker-compose ps
+$ docker-compose -f docker-compose-ethchain.yml ps
 ```
 ### Logs
 ```
-$ docker-compose logs -f
+$ docker-compose -f docker-compose-ethchain.yml logs -f
 ```
 
-After it starts Parity will be accessible from 8545 (RPC), 8546 (WS), 8180 (UI) only at localhost and for development purpose
-
-**Note**: In case of having the ports occupied, you should change them in the file docker-compose.yml by others.
-
-If you need to get a token for the UI you can execute the following command:
-
-```
-$ docker-compose exec dnp_ethchain parity signer new-token
-```
 **Note**: 
 There is a time drift issue on Docker for Mac, to solve it try running [Fixing Time drift issue on Docker for Mac](https://blog.shameerc.com/2017/03/quick-tip-fixing-time-drift-issue-on-docker-for-mac):
 
@@ -76,7 +79,7 @@ $ docker run --rm --privileged alpine hwclock -s
 [xz](https://tukaani.org/xz/) is required 
 
 ```
-$ docker save dnp_ethchain:dev | xz -9 > dnp_ethchain_dev.tar.xz
+$ docker save dnp_ethchain:dev | xz -e9vT0 > dnp_ethchain_dev.tar.xz
 ```
 
 You can download the latest tar.xz version from here [releases](https://github.com/dappnode/DNP_ETHCHAIN/releases).
@@ -89,7 +92,7 @@ $docker load -i dnp_ethchain_dev.tar.xz
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/dappnode) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/dappnode/DAppNode/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -103,7 +106,7 @@ See also the list of [contributors](https://github.com/dappnode/DNP_ETHCHAIN/con
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details
 
 ## References
 
