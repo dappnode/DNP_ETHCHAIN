@@ -8,16 +8,16 @@ networks:
                 - subnet: 172.33.0.0/16
 
 volumes:
-  data: {}
+  ethchaindnpdappnodeeth_data: {}
   
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
-    image: ethchain.dnp.dappnode.eth:0.1.0
+    image: ethchain.dnp.dappnode.eth:0.1.1
     container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
     restart: always
     volumes:
-      - data:/root/.local/share/io.parity.ethereum/
+      - ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/
     ports:
       - "30303:30303"
       - "30303:30303/udp"
