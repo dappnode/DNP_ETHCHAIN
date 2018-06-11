@@ -1,7 +1,7 @@
 # DAppNode Package ETHCHAIN (Core)
 
 <p align="left">
-  <img src="ETHCHAIN-min.png" width="100"/>
+  <img src="ETHCHAIN-min.png" width="200"/>
 </p>
 
 [![Website dappnode.io](https://img.shields.io/badge/Website-dappnode.io-brightgreen.svg)](https://dappnode.io/)
