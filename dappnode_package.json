@@ -1,6 +1,6 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v1.10.6",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
