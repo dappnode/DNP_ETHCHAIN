@@ -1,7 +1,7 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.1.5",
-  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v1.10.6",
+  "version": "0.1.6",
+  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.0.6",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
   "image": {
@@ -27,7 +27,6 @@
     "Ethereum"
   ],
   "homepage": {
-    "adminui": "http://my.ethchain.dnp.dappnode.eth:8180",
     "userui": "http://my.ethchain.dnp.dappnode.eth:8545",
     "homepage": "https://github.com/dappnode/DNP_ETHCHAIN#readme"
   },
