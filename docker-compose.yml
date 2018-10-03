@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+    ethchain.dnp.dappnode.eth:
+        image: 'ethchain.dnp.dappnode.eth:0.1.6'
+        build: ./build
+        volumes:
+            - >-
+                ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/
+        ports:
+            - '30303:30303'
+            - '30303:30303/udp'
+volumes:
+    ethchaindnpdappnodeeth_data: {}
