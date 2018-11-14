@@ -13,14 +13,17 @@ volumes:
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
-    image: ethchain.dnp.dappnode.eth:0.1.8
+    image: ethchain.dnp.dappnode.eth:0.1.9
     container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
     restart: always
     volumes:
       - ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/
+    env_file:
+      - ethchain.dnp.dappnode.eth.env
     ports:
       - "30303:30303"
       - "30303:30303/udp"
+      - "30304:30304/udp"
     dns: 172.33.1.2
     networks:
       network:
