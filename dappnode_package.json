@@ -1,6 +1,6 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.1.4-beta",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
@@ -11,14 +11,8 @@
     "volumes": [
       "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/"
     ],
-    "ports": [
-      "30303:30303",
-      "30303:30303/udp",
-      "30304:30304/udp"
-    ],
-    "environment": [
-      "EXTRA_OPTS"
-    ],
+    "ports": ["30303:30303", "30303:30303/udp", "30304:30304/udp"],
+    "environment": ["EXTRA_OPTS"],
     "restart": "always",
     "subnet": "172.33.0.0/16",
     "ipv4_address": "172.33.1.6"
@@ -27,12 +21,7 @@
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
   ],
-  "keywords": [
-    "DAppNodeCore",
-    "Parity",
-    "Mainnet",
-    "Ethereum"
-  ],
+  "keywords": ["DAppNodeCore", "Parity", "Mainnet", "Ethereum"],
   "homepage": {
     "userui": "http://my.ethchain.dnp.dappnode.eth:8545",
     "homepage": "https://github.com/dappnode/DNP_ETHCHAIN#readme"
