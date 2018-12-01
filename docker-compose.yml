@@ -1,19 +1,19 @@
-version: '3.4'
+version: "3.4"
 
 networks:
-    network:
-        driver: bridge
-        ipam:
-            config:
-                - subnet: 172.33.0.0/16
+  network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.33.0.0/16
 
 volumes:
   ethchaindnpdappnodeeth_data: {}
-  
+
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
-    image: ethchain.dnp.dappnode.eth:0.1.9
+    image: ethchain.dnp.dappnode.eth:0.1.10
     container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
     restart: always
     volumes:
