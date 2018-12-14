@@ -45,7 +45,7 @@ jobs:
         file_glob: true
         file: build_${TRAVIS_TAG}/*
         skip_cleanup: true
-        name: "v$TRAVIS_TAG"
+        name: "$TRAVIS_TAG"
         body: "# Changelog"
         on:
           branch: master
