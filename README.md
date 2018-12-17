@@ -43,7 +43,7 @@ $ git clone https://github.com/dappnode/DNP_ETHCHAIN.git
 ```
 
 ```
-$ docker-compose -f docker-compose-ethchain.yml build
+$ docker-compose build
 or 
 $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build 
 ```
@@ -52,19 +52,19 @@ $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build
 
 ### Start
 ```
-$ docker-compose -f docker-compose-ethchain.yml up -d
+$ docker-compose up
 ```
 ### Stop
 ```
-$ docker-compose -f docker-compose-ethchain.yml down
+$ docker-compose down
 ```
 ### Status
 ```
-$ docker-compose -f docker-compose-ethchain.yml ps
+$ docker-compose ps
 ```
 ### Logs
 ```
-$ docker-compose -f docker-compose-ethchain.yml logs -f
+$ docker-compose logs -f
 ```
 
 **Note**: 
