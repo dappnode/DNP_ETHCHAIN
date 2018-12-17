@@ -52,7 +52,7 @@ $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build
 
 ### Start
 ```
-$ docker-compose up
+$ docker-compose up -d
 ```
 ### Stop
 ```
