@@ -3,7 +3,7 @@ FROM alpine:edge as builder
 
 WORKDIR /usr/src/app
 
-ARG PARITY_VERSION=v2.2.2
+ARG PARITY_VERSION=v2.2.5
 
 RUN apk --no-cache add git rust cargo make openssl-dev eudev-dev linux-headers g++ cmake perl musl-dev
 RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum && cd parity-ethereum && \

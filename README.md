@@ -12,7 +12,7 @@
 
 Dappnode package responsible for providing the Ethereum blockchain service. 
 
-Actually based on version 2.2.2 of [Parity](https://github.com/paritytech/parity/releases/tag/v2.2.2)
+Actually based on version 2.2.5 of [Parity](https://github.com/paritytech/parity/releases/tag/v2.2.5)
 
 It is an AragonApp whose repo is deployed at this address: [0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ](https://etherscan.io/address/0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ) and whose ENS address is: [ethchain.dnp.dappnode.eth](https://etherscan.io/enslookup?q=ethchain.dnp.dappnode.eth])
 
@@ -43,7 +43,7 @@ $ git clone https://github.com/dappnode/DNP_ETHCHAIN.git
 ```
 
 ```
-$ docker-compose -f docker-compose-ethchain.yml build
+$ docker-compose build
 or 
 $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build 
 ```
@@ -52,19 +52,19 @@ $ docker build --rm -f build/Dockerfile -t dnp_ethchain:dev build
 
 ### Start
 ```
-$ docker-compose -f docker-compose-ethchain.yml up -d
+$ docker-compose up -d
 ```
 ### Stop
 ```
-$ docker-compose -f docker-compose-ethchain.yml down
+$ docker-compose down
 ```
 ### Status
 ```
-$ docker-compose -f docker-compose-ethchain.yml ps
+$ docker-compose ps
 ```
 ### Logs
 ```
-$ docker-compose -f docker-compose-ethchain.yml logs -f
+$ docker-compose logs -f
 ```
 
 **Note**: 
