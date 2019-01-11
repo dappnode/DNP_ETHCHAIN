@@ -3,7 +3,7 @@ FROM alpine:edge as builder
 
 WORKDIR /usr/src/app
 
-ARG PARITY_VERSION=v2.2.5
+ARG PARITY_VERSION=v2.2.6
 
 RUN apk --no-cache add git rust cargo make openssl-dev eudev-dev linux-headers g++ cmake perl musl-dev
 RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum && cd parity-ethereum && \
@@ -12,7 +12,6 @@ RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:3.8
 
-#RUN apk --no-cache add ca-certificates libgcc libstdc++ eudev
 RUN apk --no-cache add libstdc++ eudev
 COPY --from=builder /usr/src/app/parity-ethereum/target/release/parity /usr/local/bin
 
