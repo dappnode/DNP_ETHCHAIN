@@ -16,7 +16,7 @@ services:
         restart: always
         volumes:
             - >-
-                ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/
+                ethchaindnpdappnodeeth_data:/home/parity/.local/share/io.parity.ethereum/     
         env_file:
             - ethchain.dnp.dappnode.eth.env
         ports:
