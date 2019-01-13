@@ -2,12 +2,6 @@ language: node_js
 dist: trusty
 sudo: required
 
-stages:
-  - name: build-test
-    if: tag !~ ^release*$"
-  - name: release
-    if: tag =~ ^release*$"
-
 jobs:
   include:
     # Test that it builds correctly
