@@ -2,16 +2,22 @@ language: node_js
 dist: trusty
 sudo: required
 
+stages:
+  - name: build-test
+    if: tag !~ ^release*$"
+  - name: release
+    if: tag =~ ^release*$"
+
 jobs:
   include:
     # Test that it builds correctly
     ###############################
-    - stage: build test
-      if: tag !~ ^release*$"
+    - stage: build-test
+      if: env(TRAVIS_TAG) != master
       services:
         - docker
       script:
-        - docker-compose -f "$(find . -maxdepth 1 -name "docker-compose*")" build
+        - docker-compose build
 
     # Deploy stage
     # - code below is common between DAppNode packages
@@ -19,12 +25,14 @@ jobs:
     - stage: release
       services:
         - docker
-      script: skip
+      script:
+        - docker-compose build
+        - npm install -g @dappnode/dappnodesdk
+        - dappnodesdk publish patch -p infura
       node_js: lts/*
       before_deploy:
         - wget https://raw.githubusercontent.com/dappnode/DAppNode/dac9b3a964aaac93bf704344be0531b2e819d0e1/scripts/before_deploy.sh
         - source before_deploy.sh
-        - dappnodesdk publish patch -p infura
       deploy:
         provider: releases
         prerelease: true
