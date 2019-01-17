@@ -12,7 +12,7 @@
 
 Dappnode package responsible for providing the Ethereum blockchain service. 
 
-Actually based on version v2.2.7-stable of [Parity](https://github.com/paritytech/parity/releases/tag/v2.2.7)
+Actually based on version v2.2.7-stable of [Parity](https://github.com/paritytech/parity/releases/tag/v2.2.7) and compatible with Constantinople postponement. 
 
 It is an AragonApp whose repo is deployed at this address: [0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ](https://etherscan.io/address/0x30a933d920bc4a71a446a0f15f0e80eaf2383fc9 ) and whose ENS address is: [ethchain.dnp.dappnode.eth](https://etherscan.io/enslookup?q=ethchain.dnp.dappnode.eth])
 
