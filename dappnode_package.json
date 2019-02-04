@@ -1,13 +1,13 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.1.12",
-  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.2.7-stable",
+  "version": "0.1.13",
+  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.2.9-stable",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
   "image": {
-    "path": "ethchain.dnp.dappnode.eth_0.1.12.tar.xz",
-    "hash": "/ipfs/Qmbq2UrVH2UACDLdPqfbz26b6EoUCqAhd4MMkGCi2SQoK6",
-    "size": 10919262,
+    "path": "",
+    "hash": "",
+    "size": "",
     "volumes": [
       "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/"
     ],
