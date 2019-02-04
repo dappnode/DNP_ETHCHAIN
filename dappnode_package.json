@@ -4,6 +4,7 @@
   "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.2.9-stable",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
+  "chain": "ethereum",
   "image": {
     "path": "",
     "hash": "",
