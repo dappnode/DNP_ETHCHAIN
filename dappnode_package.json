@@ -18,7 +18,7 @@
       "30304:30304/udp"
     ],
     "environment": [
-      "EXTRA_OPTS"
+      "EXTRA_OPTS=--jsonrpc-port 8545 --jsonrpc-interface all --jsonrpc-hosts all --jsonrpc-cors all --ws-interface 0.0.0.0 --ws-port 8546 --ws-origins all --ws-hosts all --ws-max-connections 1000 --warp-barrier 7045000"
     ],
     "restart": "always",
     "subnet": "172.33.0.0/16",
