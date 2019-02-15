@@ -11,7 +11,7 @@ volumes:
 services:
     ethchain.dnp.dappnode.eth:
         build: ./build
-        image: 'ethchain.dnp.dappnode.eth:0.1.14'
+        image: 'ethchain.dnp.dappnode.eth:0.1.15'
         container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
         restart: always
         volumes:
@@ -29,5 +29,5 @@ services:
                 ipv4_address: 172.33.1.6
         logging:
             options:
-                max-size: "10m"
-                max-file: "3"
+                max-size: 10m
+                max-file: '3'
