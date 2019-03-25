@@ -28,4 +28,4 @@ RUN apk --no-cache add \
 
 COPY --from=builder /parity-ethereum/target/x86_64-alpine-linux-musl/release/parity /usr/local/bin
 
-ENTRYPOINT parity $EXTRA_OPTS
+ENTRYPOINT parity --jsonrpc-port 8545 --jsonrpc-interface all --jsonrpc-hosts all --jsonrpc-cors all --ws-interface 0.0.0.0 --ws-port 8546 --ws-origins all --ws-hosts all --ws-max-connections 1000 --warp-barrier 7400000 $EXTRA_OPTS
