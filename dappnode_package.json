@@ -13,9 +13,7 @@
       "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/"
     ],
     "ports": ["30303:30303", "30303:30303/udp", "30304:30304/udp"],
-    "environment": {
-      "EXTRA_OPTS": ""
-    },
+    "environment": ["EXTRA_OPTS="],
     "restart": "always",
     "subnet": "172.33.0.0/16",
     "ipv4_address": "172.33.1.6"
