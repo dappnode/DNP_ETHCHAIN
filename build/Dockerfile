@@ -1,7 +1,7 @@
 # Build Parity in a stock alpine builder container
 FROM alpine:edge as builder
 
-ARG PARITY_VERSION=v2.4.9
+ARG PARITY_VERSION=v2.5.5
 
 RUN apk --no-cache add \
     build-base \
