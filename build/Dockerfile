@@ -1,7 +1,7 @@
 # Build Parity in a stock alpine builder container
 FROM alpine:edge as builder
 
-ARG PARITY_VERSION=v2.5.7
+ARG PARITY_VERSION=v2.5.8
 
 RUN apk --no-cache add \
     build-base \
@@ -19,7 +19,7 @@ RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum
     strip target/x86_64-alpine-linux-musl/release/parity
 
 # Pull Parity into a second stage deploy alpine container
-FROM alpine:3.8
+FROM alpine:edge
 
 RUN apk --no-cache add \
     libstdc++ \ 
