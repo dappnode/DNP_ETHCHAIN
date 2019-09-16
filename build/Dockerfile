@@ -18,6 +18,8 @@ RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum
     cargo build --release --features final --target x86_64-alpine-linux-musl --verbose && \
     strip target/x86_64-alpine-linux-musl/release/parity
 
+FROM ethereum/client-go:alltools-v1.9.3 as geth
+
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:edge
 
@@ -26,6 +28,10 @@ RUN apk --no-cache add \
     eudev-libs \
     libgcc
 
+ADD entrypoint.sh /usr/local/bin/entrypoint.sh
+
+COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
+COPY --from=geth /usr/local/bin/bootnode /usr/local/bin/bootnode
 COPY --from=builder /parity-ethereum/target/x86_64-alpine-linux-musl/release/parity /usr/local/bin
 
-ENTRYPOINT parity --jsonrpc-port 8545 --jsonrpc-interface all --jsonrpc-hosts all --jsonrpc-cors all --ws-interface 0.0.0.0 --ws-port 8546 --ws-origins all --ws-hosts all --ws-max-connections 1000 $EXTRA_OPTS
+ENTRYPOINT ["entrypoint.sh"]

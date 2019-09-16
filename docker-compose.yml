@@ -7,6 +7,8 @@ networks:
         - subnet: 172.33.0.0/16
 volumes:
   ethchaindnpdappnodeeth_data: {}
+  ethchaindnpdappnodeeth_geth: {}
+  ethchaindnpdappnodeeth_identity: {}
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
@@ -15,6 +17,8 @@ services:
     restart: always
     volumes:
       - 'ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum'
+      - 'ethchaindnpdappnodeeth_geth:/root/.ethereum/'
+      - 'ethchaindnpdappnodeeth_identity:/root/identity/'
     env_file:
       - ethchain.dnp.dappnode.eth.env
     ports:

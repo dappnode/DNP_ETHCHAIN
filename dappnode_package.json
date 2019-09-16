@@ -5,13 +5,15 @@
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
   "chain": "ethereum",
-  "upstreamVersion": "v2.5.8-stable",
+  "upstreamVersion": "Geth:v1.9.3/Parity:v2.5.8-stable",
   "image": {
     "path": "ethchain.dnp.dappnode.eth_0.2.6.tar.xz",
     "hash": "/ipfs/QmbEFEC12zFYZduZB4Q2zh2GLuox9SQjKtjcLLs8BzK2YQ",
     "size": 11680248,
     "volumes": [
-      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/"
+      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/",
+      "ethchaindnpdappnodeeth_geth:/root/.ethereum/",
+      "ethchaindnpdappnodeeth_identity:/root/identity/"
     ],
     "ports": [
       "30303:30303",
@@ -19,7 +21,9 @@
       "30304:30304/udp"
     ],
     "environment": [
-      "EXTRA_OPTS="
+      "EXTRA_OPTS_PARITY=--warp-barrier 8540000",
+      "EXTRA_OPTS_GETH=",
+      "DEFAULT_CLIENT="
     ],
     "restart": "always",
     "subnet": "172.33.0.0/16",
