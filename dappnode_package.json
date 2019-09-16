@@ -1,11 +1,11 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.2.6",
-  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Parity v2.5.8-stable",
+  "version": "0.2.7",
+  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Geth v1.9.3 and Parity v2.5.8-stable",
   "avatar": "/ipfs/QmNdWMzgapc49kpofYFE9M63Snc2dKJ8YQmEmdRU8wPMEg",
   "type": "dncore",
   "chain": "ethereum",
-  "upstreamVersion": "Geth:v1.9.3/Parity:v2.5.8-stable",
+  "upstreamVersion": "Geth:v1.9.3/Parity:v2.5.8",
   "image": {
     "path": "ethchain.dnp.dappnode.eth_0.2.6.tar.xz",
     "hash": "/ipfs/QmbEFEC12zFYZduZB4Q2zh2GLuox9SQjKtjcLLs8BzK2YQ",
