@@ -26,7 +26,8 @@ FROM alpine:edge
 RUN apk --no-cache add \
     libstdc++ \ 
     eudev-libs \
-    libgcc
+    libgcc \
+    bash
 
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
