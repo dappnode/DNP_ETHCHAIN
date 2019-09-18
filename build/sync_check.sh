@@ -1,4 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash
+
+set -e
 
 LIGHT_PID=$(ps -ef | grep "syncmode light" | grep -v "grep" | awk '{print $1}')
 curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'  http://localhost:8645 | grep 'false'

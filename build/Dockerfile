@@ -42,7 +42,7 @@ COPY nginx.conf.full /etc/nginx/nginx.conf.full
 COPY nginx.conf.light /etc/nginx/nginx.conf.light
 
 COPY sync_check.sh /etc/periodic/1min/sync_check.sh
-RUN crontab -l | { cat; echo "*       *       *       *       *       /etc/periodic/1min/sync_check.sh >/var/log/crontab.log 2>&1"; } | crontab -
+RUN crontab -l | { cat; echo "*       *       *       *       *       /etc/periodic/1min/sync_check.sh"; } | crontab -
 
 
 ENTRYPOINT ["entrypoint.sh"]
