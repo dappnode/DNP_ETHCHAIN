@@ -29,7 +29,8 @@ RUN apk --no-cache add \
     libgcc \
     bash \ 
     nginx \
-    curl
+    curl \ 
+    jq
 
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
@@ -41,8 +42,8 @@ COPY nginx.conf.full /etc/nginx/nginx.conf
 COPY nginx.conf.full /etc/nginx/nginx.conf.full
 COPY nginx.conf.light /etc/nginx/nginx.conf.light
 
-COPY sync_check.sh /etc/periodic/1min/sync_check.sh
-RUN crontab -l | { cat; echo "*       *       *       *       *       /etc/periodic/1min/sync_check.sh"; } | crontab -
+COPY sync_check.sh /etc/periodic/custom/sync_check.sh
+RUN echo "*/2       *       *       *       *       /etc/periodic/custom/sync_check.sh >/var/log/crontab.log 2>&1" | crontab -
 
 
 ENTRYPOINT ["entrypoint.sh"]
