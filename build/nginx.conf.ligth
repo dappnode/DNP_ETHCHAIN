@@ -50,6 +50,7 @@ http {
         server_name     ethchain.dappnode fullnode.dappnode;
 
         location / {
+            add_header Client-Mode Light;
             proxy_pass      http://ethereum_node;
         }
     }
