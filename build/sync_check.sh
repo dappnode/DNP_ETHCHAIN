@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 LIGHT_PID=$(ps -ef | grep "syncmode light" | grep -v "grep" | awk '{print $1}')
-curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'  http://localhost:8645 | grep '"result": false'
+curl -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'  http://localhost:8645 | grep 'false'
 if [ $? = 0 ];then
-    if [ -z "$LIGHT_PID" ]; then
+    if [ ! -z "$LIGHT_PID" ]; then
         kill $LIGHT_PID
     fi
     cp /etc/nginx/nginx.conf.full /etc/nginx/nginx.conf

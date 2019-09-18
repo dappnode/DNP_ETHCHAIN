@@ -12,7 +12,7 @@ volumes:
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
-    image: 'ethchain.dnp.dappnode.eth:0.2.7'
+    image: 'ethchain.dnp.dappnode.eth:0.2.8'
     container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
     restart: always
     volumes:
