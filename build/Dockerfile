@@ -27,12 +27,22 @@ RUN apk --no-cache add \
     libstdc++ \ 
     eudev-libs \
     libgcc \
-    bash
+    bash \ 
+    nginx \
+    curl
 
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
 COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
 COPY --from=geth /usr/local/bin/bootnode /usr/local/bin/bootnode
 COPY --from=builder /parity-ethereum/target/x86_64-alpine-linux-musl/release/parity /usr/local/bin
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf.ligth /etc/nginx/nginx.conf.ligth
+
+
+COPY sync_check.sh /etc/periodic/1min/sync_check.sh
+RUN crontab -l | { cat; echo "*       *       *       *       *       /etc/periodic/1min/sync_check.sh >/var/log/crontab.log 2>&1"; } | crontab -
+
 
 ENTRYPOINT ["entrypoint.sh"]
