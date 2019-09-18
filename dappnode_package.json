@@ -7,9 +7,9 @@
   "chain": "ethereum",
   "upstreamVersion": "Geth:v1.9.3/Parity:v2.5.8",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "ethchain.dnp.dappnode.eth_0.2.8.tar.xz",
+    "hash": "/ipfs/QmVnYszVJ7xWwYx6rqv81xfbvP97887m2S4hkuk1LCj4C9",
+    "size": 34804744,
     "volumes": [
       "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/",
       "ethchaindnpdappnodeeth_geth:/root/.ethereum/",

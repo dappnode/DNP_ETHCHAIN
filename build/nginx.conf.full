@@ -1,7 +1,7 @@
 user  nginx;
 worker_processes  1;
 
-error_log  /dev/stdout info;
+error_log /dev/null;
 pid        /var/run/nginx.pid;
 
 events {
@@ -16,7 +16,7 @@ http {
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
 
-    access_log  /dev/stdout  main;
+    access_log  /dev/null;
 
     server_tokens off;
 

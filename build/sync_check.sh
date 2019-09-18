@@ -16,7 +16,7 @@ if [ $? = 0 ];then
     pkill crond
     rm -rf /root/.ethereum/geth-light
 elif [ -z "$LIGHT_PID" ]; then        
-    cp /etc/nginx/nginx.conf.ligth /etc/nginx/nginx.conf
+    cp /etc/nginx/nginx.conf.light /etc/nginx/nginx.conf
     nginx -s reload
     geth --syncmode light --datadir /root/.ethereum/geth-light --port 31313 --nousb --rpc --rpcaddr 0.0.0.0 --rpcport 8745 --rpccorsdomain "*" --rpcvhosts "*" --ws --wsorigins "*" --wsaddr 0.0.0.0 --wsport 8746 &
 fi

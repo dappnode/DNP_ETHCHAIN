@@ -39,7 +39,7 @@ COPY --from=builder /parity-ethereum/target/x86_64-alpine-linux-musl/release/par
 
 COPY nginx.conf.full /etc/nginx/nginx.conf
 COPY nginx.conf.full /etc/nginx/nginx.conf.full
-COPY nginx.conf.ligth /etc/nginx/nginx.conf.ligth
+COPY nginx.conf.light /etc/nginx/nginx.conf.light
 
 COPY sync_check.sh /etc/periodic/1min/sync_check.sh
 RUN crontab -l | { cat; echo "*       *       *       *       *       /etc/periodic/1min/sync_check.sh >/var/log/crontab.log 2>&1"; } | crontab -
