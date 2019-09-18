@@ -2,7 +2,8 @@
 
 set -e
 
-crond
+#Avoid to run the script on the first 2 min
+(sleep 120; crond) & 
 nginx -c /etc/nginx/nginx.conf
 
 # If there is no nodekey we generate a new one and we copy to parity and geth directories
