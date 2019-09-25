@@ -12,15 +12,17 @@ volumes:
 services:
   ethchain.dnp.dappnode.eth:
     build: ./build
-    image: 'ethchain.dnp.dappnode.eth:0.2.7'
+    image: 'ethchain.dnp.dappnode.eth:0.2.9'
     container_name: DAppNodeCore-ethchain.dnp.dappnode.eth
     restart: always
     volumes:
       - 'ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum'
       - 'ethchaindnpdappnodeeth_geth:/root/.ethereum/'
       - 'ethchaindnpdappnodeeth_identity:/root/identity/'
-    env_file:
-      - ethchain.dnp.dappnode.eth.env
+    environment:
+      - EXTRA_OPTS=--warp-barrier 8540000
+      - EXTRA_OPTS_GETH
+      - DEFAULT_CLIENT=PARITY
     ports:
       - '30303:30303'
       - '30303:30303/udp'
