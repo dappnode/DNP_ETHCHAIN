@@ -23,7 +23,7 @@
     "environment": [
       "EXTRA_OPTS=--warp-barrier 8540000",
       "EXTRA_OPTS_GETH=",
-      "DEFAULT_CLIENT="
+      "DEFAULT_CLIENT=PARITY"
     ],
     "restart": "always",
     "subnet": "172.33.0.0/16",
