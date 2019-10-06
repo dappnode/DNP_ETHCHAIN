@@ -1,7 +1,7 @@
 # Build Parity in a stock alpine builder container
 FROM alpine:edge as builder
 
-ARG PARITY_VERSION=v2.5.8
+ARG PARITY_VERSION=v2.6.4
 
 RUN apk --no-cache add \
     build-base \
@@ -18,7 +18,7 @@ RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum
     cargo build --release --features final --target x86_64-alpine-linux-musl --verbose && \
     strip target/x86_64-alpine-linux-musl/release/parity
 
-FROM ethereum/client-go:alltools-v1.9.5 as geth
+FROM ethereum/client-go:alltools-v1.9.6 as geth
 
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:edge
