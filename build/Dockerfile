@@ -3,6 +3,9 @@ FROM alpine:edge as builder
 
 ARG PARITY_VERSION=v2.6.4
 
+# show backtraces
+ENV RUST_BACKTRACE 1
+
 RUN apk --no-cache add \
     build-base \
     cargo \
