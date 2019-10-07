@@ -11,7 +11,7 @@
     "hash": "",
     "size": "",
     "volumes": [
-      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/",
+      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum",
       "ethchaindnpdappnodeeth_geth:/root/.ethereum/",
       "ethchaindnpdappnodeeth_identity:/root/identity/"
     ],
