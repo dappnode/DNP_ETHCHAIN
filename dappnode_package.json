@@ -1,6 +1,6 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Geth v1.9.6 and Parity v2.6.4-beta",
   "avatar": "/ipfs/QmQnHxr4YAVdtqzHnsDYvmXizxptSYyaj3YwTjoiLshVwF",
   "type": "dncore",
@@ -11,7 +11,7 @@
     "hash": "",
     "size": "",
     "volumes": [
-      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum/",
+      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum",
       "ethchaindnpdappnodeeth_geth:/root/.ethereum/",
       "ethchaindnpdappnodeeth_identity:/root/identity/"
     ],
