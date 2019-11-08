@@ -5,11 +5,11 @@
   "avatar": "/ipfs/QmQnHxr4YAVdtqzHnsDYvmXizxptSYyaj3YwTjoiLshVwF",
   "type": "dncore",
   "chain": "ethereum",
-  "upstreamVersion": "Geth:v1.9.6/Parity:v2.6.4",
+  "upstreamVersion": "Geth:v1.9.7/Parity:v2.6.4",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "ethchain.dnp.dappnode.eth_0.2.13.tar.xz",
+    "hash": "/ipfs/QmQZX8eVz6QZvVaSDAmX6wKPRtzjV5RahYZDCzW9SsQbZr",
+    "size": 36053032,
     "volumes": [
       "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum",
       "ethchaindnpdappnodeeth_geth:/root/.ethereum/",
