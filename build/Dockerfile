@@ -33,6 +33,8 @@ RUN apk --no-cache add \
     libgcc \
     bash
 
+RUN apk add -u musl
+
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
 COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
