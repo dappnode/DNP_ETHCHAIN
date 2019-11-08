@@ -16,12 +16,13 @@ RUN apk --no-cache add \
     rust \ 
     git
 
-RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum && \ 
-    cd parity-ethereum && \
-    cargo build --release --features final --target x86_64-alpine-linux-musl --verbose && \
-    strip target/x86_64-alpine-linux-musl/release/parity
+RUN git clone -b ${PARITY_VERSION} https://github.com/paritytech/parity-ethereum /parity-ethereum
+WORKDIR /parity-ethereum
+RUN cargo build 
+RUN cargo build --release --features final --target x86_64-alpine-linux-musl
+RUN strip target/x86_64-alpine-linux-musl/release/parity
 
-FROM ethereum/client-go:alltools-v1.9.6 as geth
+FROM ethereum/client-go:alltools-v1.9.7 as geth
 
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:edge
