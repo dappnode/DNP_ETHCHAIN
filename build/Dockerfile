@@ -1,7 +1,7 @@
 # Build Parity in a stock alpine builder container
 FROM alpine:edge as builder
 
-ARG PARITY_VERSION=v2.6.4
+ARG PARITY_VERSION=v2.5.10
 
 # show backtraces
 ENV RUST_BACKTRACE 1
