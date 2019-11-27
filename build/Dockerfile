@@ -22,7 +22,7 @@ RUN cargo build
 RUN cargo build --release --features final --target x86_64-alpine-linux-musl
 RUN strip target/x86_64-alpine-linux-musl/release/parity
 
-FROM ethereum/client-go:alltools-v1.9.7 as geth
+FROM ethereum/client-go:alltools-v1.9.8 as geth
 
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:edge
