@@ -27,7 +27,7 @@ jobs:
       services:
         - docker
       script:
-        - travis_wait 50 docker-compose build
+        - travis_wait 70 docker-compose build
 
     # Deploy stage
     # - code below is common between DAppNode packages
@@ -38,7 +38,7 @@ jobs:
         - docker
       script:
         - npm install -g @dappnode/dappnodesdk
-        - travis_wait 50 docker-compose build
+        - travis_wait 70 docker-compose build
         - "TYPE=${TRAVIS_TAG##*/}"
         - "[ ! '$TYPE' = 'release' ] || TYPE='patch'"
         - dappnodesdk publish ${TYPE} -p infura
