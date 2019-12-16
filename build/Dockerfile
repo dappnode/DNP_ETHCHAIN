@@ -1,7 +1,7 @@
 # Build Parity in a stock alpine builder container
 FROM alpine:edge as builder
 
-ARG PARITY_VERSION=v2.5.11
+ARG PARITY_VERSION=v2.5.12
 
 # show backtraces
 ENV RUST_BACKTRACE 1
@@ -22,7 +22,7 @@ RUN cargo build
 RUN cargo build --release --features final --target x86_64-alpine-linux-musl
 RUN strip target/x86_64-alpine-linux-musl/release/parity
 
-FROM ethereum/client-go:alltools-v1.9.8 as geth
+FROM ethereum/client-go:alltools-v1.9.9 as geth
 
 # Pull Parity into a second stage deploy alpine container
 FROM alpine:edge
