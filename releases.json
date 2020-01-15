@@ -24,10 +24,10 @@
     "link": "http://my.dappnode/#/sdk/publish/r=ethchain.dnp.dappnode.eth&v=0.2.17&h=%2Fipfs%2FQmeBfnwgsNcEmbmxENBWtgkv5YZsAhiaDsoYd7nMTV1wKV"
   },
   "0.2.18": {
-    "hash": "/ipfs/QmdoBux45Yn3pidgkzeckk8E2car4bVw9WJqpaR46yeAuP",
+    "hash": "/ipfs/Qmc4wMNiW7zn4m48FYbvddwCpnouXZCAh6Q2baNv41fDxE",
     "type": "manifest",
     "uploadedTo": {
-      "dappnode": "Tue, 14 Jan 2020 21:34:12 GMT"
+      "dappnode": "Wed, 15 Jan 2020 13:50:14 GMT"
     }
   }
 }

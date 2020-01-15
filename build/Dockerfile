@@ -33,7 +33,7 @@ RUN apk --no-cache add \
     libgcc \
     bash
 
-RUN apk add -u musl
+RUN apk add -u musl tini
 
 ADD entrypoint.sh /usr/local/bin/entrypoint.sh
 
@@ -41,4 +41,5 @@ COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
 COPY --from=geth /usr/local/bin/bootnode /usr/local/bin/bootnode
 COPY --from=builder /parity-ethereum/target/x86_64-alpine-linux-musl/release/parity /usr/local/bin
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--"]
+CMD ["entrypoint.sh"]
