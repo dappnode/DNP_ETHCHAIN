@@ -24,10 +24,11 @@
     "link": "http://my.dappnode/#/sdk/publish/r=ethchain.dnp.dappnode.eth&v=0.2.17&h=%2Fipfs%2FQmeBfnwgsNcEmbmxENBWtgkv5YZsAhiaDsoYd7nMTV1wKV"
   },
   "0.2.18": {
-    "hash": "/ipfs/Qmc4wMNiW7zn4m48FYbvddwCpnouXZCAh6Q2baNv41fDxE",
+    "hash": "/ipfs/QmfZFUmjsvGGapAhWGH3p4bgQXDvKkphxqrMUCbFf6qLTU",
     "type": "manifest",
     "uploadedTo": {
-      "dappnode": "Wed, 15 Jan 2020 13:50:14 GMT"
-    }
+      "dappnode": "Tue, 31 Dec 2019 12:30:13 GMT"
+    },
+    "link": "http://my.dappnode/#/sdk/publish/r=ethchain.dnp.dappnode.eth&v=0.2.18&h=%2Fipfs%2FQmfZFUmjsvGGapAhWGH3p4bgQXDvKkphxqrMUCbFf6qLTU"
   }
 }
