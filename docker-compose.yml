@@ -18,11 +18,11 @@ services:
     restart: always
     volumes:
       - 'ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum'
-      - 'ethchaindnpdappnodeeth_geth:/root/.ethereum/'
-      - 'ethchaindnpdappnodeeth_identity:/root/identity/'
+      - 'ethchaindnpdappnodeeth_geth:/root/.ethereum'
+      - 'ethchaindnpdappnodeeth_identity:/root/identity'
       - 'ethchaindnpdappnodeeth_ipc:/root/.ethereum/ipc'
     environment:
-      - EXTRA_OPTS=--warp-barrier 8540000
+      - EXTRA_OPTS=--warp-barrier 9530000
       - EXTRA_OPTS_GETH
       - DEFAULT_CLIENT=PARITY
     ports:
