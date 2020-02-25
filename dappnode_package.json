@@ -1,7 +1,7 @@
 {
   "name": "ethchain.dnp.dappnode.eth",
   "version": "0.2.20",
-  "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Geth v1.9.9 and Parity v2.5.13-stable",
+  "description": "Dappnode package responsible for providing the Ethereum blockchain",
   "type": "dncore",
   "chain": "ethereum",
   "upstreamVersion": "Geth:v1.9.11/Parity:v2.7.2",
