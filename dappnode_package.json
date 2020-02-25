@@ -2,34 +2,9 @@
   "name": "ethchain.dnp.dappnode.eth",
   "version": "0.2.19",
   "description": "Dappnode package responsible for providing the Ethereum blockchain, based on Geth v1.9.9 and Parity v2.5.13-stable",
-  "avatar": "/ipfs/QmQnHxr4YAVdtqzHnsDYvmXizxptSYyaj3YwTjoiLshVwF",
   "type": "dncore",
   "chain": "ethereum",
-  "upstreamVersion": "Geth:v1.9.9/Parity:v2.5.13",
-  "image": {
-    "path": "ethchain.dnp.dappnode.eth_0.2.18.tar.xz",
-    "hash": "/ipfs/Qmb3XRQChKWXxRcaQv4i5FR7wzVFk5FVu27BtXQ5T5VwJi",
-    "size": 35179892,
-    "volumes": [
-      "ethchaindnpdappnodeeth_data:/root/.local/share/io.parity.ethereum",
-      "ethchaindnpdappnodeeth_geth:/root/.ethereum/",
-      "ethchaindnpdappnodeeth_identity:/root/identity/",
-      "ethchaindnpdappnodeeth_ipc:/root/.ethereum/ipc"
-    ],
-    "ports": [
-      "30303:30303",
-      "30303:30303/udp",
-      "30304:30304/udp"
-    ],
-    "environment": [
-      "EXTRA_OPTS=--warp-barrier 8540000",
-      "EXTRA_OPTS_GETH=",
-      "DEFAULT_CLIENT=PARITY"
-    ],
-    "restart": "always",
-    "subnet": "172.33.0.0/16",
-    "ipv4_address": "172.33.1.6"
-  },
+  "upstreamVersion": "Geth:v1.9.11/Parity:v2.7.2",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
