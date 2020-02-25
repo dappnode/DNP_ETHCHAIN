@@ -2,6 +2,8 @@
 
 set -e
 
+mkdir -p /root/identity
+
 # If there is no nodekey we generate a new one and we copy to parity and geth directories
 if [ ! -f /root/identity/nodekey ]; then
 
