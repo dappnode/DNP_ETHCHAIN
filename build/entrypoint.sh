@@ -2,6 +2,10 @@
 
 set -e
 
+# Create needed dirs
+mkdir -p /root/.local/share/io.parity.ethereum/network
+mkdir -p /root/.ethereum/geth
+mkdir -p /root/.ethereum/ipc
 mkdir -p /root/identity
 
 # If there is no nodekey we generate a new one and we copy to parity and geth directories
@@ -15,12 +19,6 @@ if [ ! -f /root/identity/nodekey ]; then
         cp /root/.local/share/io.parity.ethereum/network/key /root/identity/nodekey
         rm /root/.local/share/io.parity.ethereum/network/key
     fi
-
-    # Create needed dirs
-    mkdir -p /root/.local/share/io.parity.ethereum/network
-    mkdir -p /root/.ethereum/geth
-    mkdir -p /root/.ethereum/ipc
-
 fi
 
 # Recreate a symbolic link to the key for parity and geth clients
