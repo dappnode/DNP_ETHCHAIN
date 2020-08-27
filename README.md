@@ -1,3 +1,5 @@
+⚠️This repo has been deprecated since now the Ethereum clients can be installed independently⚠️
+
 # DAppNode Package ETHCHAIN (Core)
 
 [![Website dappnode.io](https://img.shields.io/badge/Website-dappnode.io-brightgreen.svg)](https://dappnode.io/)
